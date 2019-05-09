@@ -1,0 +1,18 @@
+<div *ngIf="showLoadingIndicator" class="spinner"></div>
+<table class="table table-hover">
+  <tbody>
+    <tr *ngFor="let song of songs; index as i;">
+      <td>{{song.actions.id}}</td>
+      <td>{{i+1}}</td>
+      <td>
+        <a href="{{song.url}}" target="_blank"><img width="100" height="100" src="{{song.images.default}}" alt="{{song.heading.title}}" class="img-thumbnail"></a>
+      </td>
+      <td>{{song.heading.title | uppercase}}<br>
+        {{song.heading.subtitle}}
+      </td>
+      <td>
+          <a href="{{song.url}}" target="_blank"><img width="150" height="100" src="./assets/shazam-icon.png" alt="{{song.heading.title}}" class="img-thumbnail"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>

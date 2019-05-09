@@ -1,0 +1,8 @@
+<div class="form-group navbar-form navbar-left"> 
+    <button routerLink="/api/getAllFavourites" *ngIf="songsList" (click)='showFavorites()'  class="btn btn-lg btn-warning">
+      <span class="glyphicon glyphicon-star"></span> show Favorite songs
+    </button>
+    <button routerLink="api/songsList" *ngIf="!songsList"  (click)='showChart()' class="btn btn-lg btn-warning">
+      <span class="glyphicon glyphicon-star-empty"></span> show global chart
+    </button>
+</div>
